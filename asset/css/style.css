@@ -1,8 +1,10 @@
+
+
 *{
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	font-family: 'Roboto', sans-serif;
+	font-family: "PT Serif",Georgia,"Times New Roman","DejaVu Serif",serif;
 
 }
 
@@ -54,6 +56,7 @@ header{
 		/*background-color: green;*/
 		background-image: url(../img/header_bg.jpg);
 		background-position: center;
+		width: 100%;
 		}
 		.header_logo{
 			width: 20%;
@@ -109,9 +112,16 @@ header{
 		li:last-of-type{
 			text-align: right;
 		}*/
-main{
-	padding-right: 20%;
-	padding-left: 20%;
+.droite{
+	width: 25%;
+	float: left;
+}
+.main{
+	float: left;
+
+	padding-left: 25%;
+	width: 50%;
+	display: inline-block;
 	}
 	h1{
 		color: #369;
@@ -119,15 +129,17 @@ main{
 		padding-top: 10px;
 		padding-bottom: 10px;
 		text-align: center;
+		width: 100%;
 	}
 	figure{
 		display: table;
 		margin-right: auto;
 		margin-left: auto;
-
+		width: 100%;
 
 	}
 	img{
+		width: 100%;
 	}
 	figcaption{
 		text-align: center;
@@ -139,17 +151,13 @@ main{
 		position: relative;
 		top: -1.6em;
 	}
-	p{
-		padding-right: 15%;
-		padding-left: 15%;
-		font-size: 
+	.main p{
+		text-align: left;
 	}
 	.menu_droite{
-		right: 125px;
-		bottom: 10px;
-		height: 75vh;
-		width: 30vh;
-		position: absolute;
+		height: 75%;
+		width: 90%;
+		margin-left: 5%;
 		background-color: rgba(32,32,32, 1);
 		}
 		.menu_droite ul, .menu_droite li{
@@ -180,7 +188,7 @@ main{
 			padding-left: 15px; 
 		}
 footer{
-	margin-top: 100px;
+	margin-top: 50px;
 	color: #fff;
 	height: 75px;
 	background-color: #444; 
@@ -192,7 +200,61 @@ footer{
 		height: 100%;
 		float: right;
 		}
-		.copyright p{
-			height: 50%;
-			float: right;
+		footer p{
+			width: 100%;
+			text-align: center;
 		}
+
+		.clear{
+			clear: both !important;
+		}
+
+
+
+/*Media query*/
+
+@media ( max-width : 1200px ) {
+	.main{
+		padding-left: 5%;
+		width: 70%;
+	}
+	.droite{
+		width: 25%;
+	}
+}
+
+
+@media only screen and ( max-width : 993px ){
+	.main{
+		width: 90%;
+		float: none;
+	}
+	.droite{
+		width: 100%;
+		float: none;
+		padding-top: 20px;
+	}
+	.header_menu{
+		padding: 0;
+	}
+	.header_bas{
+		height: 35px;
+	}
+	nav{
+		width: 100%;
+	}
+	.nav_haut{
+		display: none;
+	}
+	.nav_bas{
+		width: 100%;
+
+	}
+	.header_menu{
+		width: 100%;
+	}
+	.header_logo{
+		display: none;
+	}
+
+}	
